@@ -1,0 +1,1 @@
+java -cp lib/hsqldb-2.2.9.jar org.hsqldb.server.Server --dbname.0 loja-virtual --database.0 file:/apl/hsqldb_tst/alura/loja-virtual
