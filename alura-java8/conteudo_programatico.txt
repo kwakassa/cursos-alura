@@ -1,0 +1,12 @@
+Estudar pacote java.util.finctions.
+
+1. Default Methods - Apartir do java 8, permite incluir implementação de métodos sem quebrar a retrocompatibilidade
+
+2. Expressao Lambdas. 
+Exemplos: 
+
+List<String> palavras = ...;
+palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+palavras.forEach(t -> System.out.println(t));
+
+3. Method Reference

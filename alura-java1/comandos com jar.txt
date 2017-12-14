@@ -1,0 +1,14 @@
+//Cria um jar, empacotando todos os .class locais e definindo uma classe Main dentro do MANIFEST.MF
+jar cvfe teste.jar TestaConfiguracaoSingleton *.class
+
+//Exibe a estrutura de diretorios dentro do jar
+jar -tf teste.jar
+
+//Descompacta o jar
+jar -xf teste.jar
+
+//Comando para executar, considerando que o MANIFEST.MF tenha uma classe Main definida
+java -jar teste.jar
+
+//executa uma classe especifica de um jar
+java -cp args.jar TestaConfiguracaoSingleton

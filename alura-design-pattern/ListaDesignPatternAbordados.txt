@@ -1,0 +1,8 @@
+1. Strategy - Design Pattern onde o objetivo é eliminar o uso de muitos IFs através do uso de Interfaces e Polimorfismo.
+2. Chain of Responsibility - Procura resolver o problema da existencia varias regras de negocio, onde a falha de uma implica na chamada da próxima regra.
+3. Template Method - Procura resolver o problema de terem classes com implementação muito parecidas através da criação de uma classe pai de template que implementa a regra básica e define methodos abstratos a serem implementados pelos filhos.
+4. Decorator - Procura resolver o problema onde é necesspario juntar comportamentos de classes separadas. Ex: Fazer a composição de impostos, sem limite de quantidade.
+	4.1 Nesse Pattern, é criado uma classe pai, com 2 construtores: Um vazio e o outros recebendo seu mesmo tipo e alocando em um atriputo "próximo" a ser executado depois.
+5. State - Ao inves de registrar estados de um comportamento por constantes, cria-se uma classe para cada estado e uma logica de alteracao entre os estados para cada estado (se pode ou nao alterar de um estado para outro).
+6. Builder - Aplica o estilo de programação chamada de "Interfaces fluentes" realizando o "method chaining", onde os metodos retornam o próprio objeto afim de poder realizar a chamada de um novo metodo para o mesmo objeto. Aplica-se em métodos que normalmente seriam void.
+7. Observer - Quando se tem uma seria de ações a serem executadas apos a construcao de um objeto (e utilizando o mesmo objeto), como salvar em banco de dados, imprimir, enviarSms, etc, podemos cria uma lista de Classes que representam essas ações (padronizadas por uma interface), e mandar executar um metodo padrão (por exemplo executa(Objeto o) varrendo essa lista.    
