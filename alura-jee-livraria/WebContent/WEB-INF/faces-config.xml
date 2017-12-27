@@ -12,9 +12,7 @@
 	</application>
 	
 	<lifecycle>
-		<phase-listener>
-			br.com.caelum.livraria.login.Autorizador 
-		</phase-listener>
+		<phase-listener>br.com.caelum.livraria.login.Autorizador</phase-listener>
 	</lifecycle>
 
 </faces-config>
