@@ -5,6 +5,9 @@
 	<artifactId>alura-jee-livraria</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -14,8 +17,22 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>livraria</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<ejbVersion>3.1</ejbVersion>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>
@@ -29,6 +46,30 @@
 				<version>3.0.0</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jboss.as.plugins</groupId>
+				<artifactId>jboss-as-maven-plugin</artifactId>
+				<version>7.9.Final</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<hostname>localhost</hostname>
+					<username>siadm</username>
+					<password>Siadm01%</password>
+					<port>9999</port>
+					<!-- <domain> -->
+					<!-- <server-groups> -->
+					<!-- <server-group>estudo01</server-group> -->
+					<!-- </server-groups> -->
+					<!-- </domain> -->
 				</configuration>
 			</plugin>
 		</plugins>

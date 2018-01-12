@@ -3,10 +3,14 @@ package br.com.caelum.livraria.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+
 import br.com.caelum.livraria.modelo.Autor;
 import br.com.caelum.livraria.modelo.Livro;
 import br.com.caelum.livraria.modelo.Usuario;
 
+@Singleton
 public class Banco {
 	
 	public static List<Livro> livros = new ArrayList<Livro>();
@@ -18,7 +22,12 @@ public class Banco {
 	static {
 		inicializaBanco();
 	}
-
+	
+	@PostConstruct
+    void aposCriacao() {
+        System.out.println("[INFO] O Banco acabou de ser criado.");
+    }
+	
 	public void save(Livro livro) {
 		livro.setId(chave++);
 		livros.add(livro);
