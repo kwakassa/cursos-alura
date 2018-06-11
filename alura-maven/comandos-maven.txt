@@ -1,0 +1,7 @@
+mvn clean
+
+mvn package
+
+mvn surefire-report:report
+
+mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart
