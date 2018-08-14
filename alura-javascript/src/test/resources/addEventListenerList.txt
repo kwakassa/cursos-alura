@@ -1,0 +1,9 @@
+ //Keyboard events
+document.addEventListener("keypress", getEvtType, false); //[second]  
+document.addEventListener("keydown", getEvtType, false); //first
+document.addEventListener("keyup", getEvtType, false); //third
+
+//Mouse events
+document.addEventListener("click", getEvtType, false); // third
+document.addEventListener("mousedown", getEvtType, false); //first
+document.addEventListener("mouseup", getEvtType, false); //second
