@@ -35,14 +35,9 @@
 			<version>2.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>br.gov.caixa</groupId>
-			<artifactId>ptdes-overview-core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
 	</dependencies>
 	<build>
-		<finalName>alura-wsrest</finalName>
+		<finalName>aluraWsRest</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -80,7 +75,7 @@
 					<port>9999</port>
 					<domain>
 						<server-groups>
-							<server-group>ptdes-group</server-group>
+							<server-group>alura-group</server-group>
 						</server-groups>
 					</domain>
 				</configuration>
