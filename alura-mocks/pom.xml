@@ -4,8 +4,8 @@
 	<groupId>br.edu.alura</groupId>
 	<artifactId>alura-mocks</artifactId>
 	<version>1.0.0</version>
-	<name>Alura - Alura TDD</name>
-	<description>Exercicios Alura TDD</description>
+	<name>Alura - Alura Mocks</name>
+	<description>Exercicios Alura Mocks</description>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 		<dependency>
@@ -20,6 +20,14 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -30,6 +38,13 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.17</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
 		</plugins>
