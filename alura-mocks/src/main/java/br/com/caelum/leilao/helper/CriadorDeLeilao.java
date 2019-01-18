@@ -4,7 +4,9 @@ import java.util.Calendar;
 
 import org.apache.log4j.Logger;
 
+import br.com.caelum.leilao.dominio.Lance;
 import br.com.caelum.leilao.dominio.Leilao;
+import br.com.caelum.leilao.dominio.Usuario;
 
 public class CriadorDeLeilao {
 	
@@ -24,6 +26,12 @@ public class CriadorDeLeilao {
 
 	public Leilao constroi() {		
 		return leilao;
+	}
+
+	public CriadorDeLeilao lance(Usuario usuario, double d) {
+		Lance lance = new Lance(usuario,d);
+		leilao.propoe(lance);
+		return this;
 	}
 	
 	
